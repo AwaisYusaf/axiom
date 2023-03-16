@@ -17,8 +17,8 @@ function ProductDetails({}: Props) {
   const [size, setSize] = useState("S");
 
   return (
-    <section className="flex flex-col lg:flex-row  lg:space-x-8 px-3 lg:px-12 py-20">
-      <div className="basis-1/2 flex flex-row-reverse lg:flex-row px-3 space-x-4">
+    <section className="flex flex-col lg:flex-row lg:space-x-8 lg:px-12 py-20">
+      <div className="basis-1/2 flex flex-row-reverse lg:flex-row lg:px-2 space-x-4">
         <div className="flex flex-col lg:items-end items-start pl-4 lg:pl-0 space-y-4 basis-1/4">
           {images.map((image, i) => {
             return (
@@ -39,7 +39,7 @@ function ProductDetails({}: Props) {
           {/* <video src="https://cdn.shopify.com/videos/c/vp/56c0401fb28f4b37ab3c5539342590e4/56c0401fb28f4b37ab3c5539342590e4.HD-720p-4.5Mbps.mp4" /> */}
         </div>
       </div>
-      <div className="basis-1/2 flex flex-col space-y-4 mt-6 lg:mt-0 px-8 lg:px-0">
+      <div className="basis-1/2 flex flex-col space-y-4 mt-6 lg:mt-0 px-4 lg:px-0">
         <h3 className="text-3xl font-bold">Chambray Button Down</h3>
         <p className="text-xl tracking-[2px]">$68</p>
         <hr className="bg-gray-300" />
