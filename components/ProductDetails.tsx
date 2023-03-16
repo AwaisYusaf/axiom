@@ -19,7 +19,7 @@ function ProductDetails({}: Props) {
   return (
     <section className="flex flex-col lg:flex-row lg:space-x-8 lg:px-12 py-20">
       <div className="basis-1/2 flex flex-row-reverse lg:flex-row lg:px-2 space-x-4">
-        <div className="flex flex-col lg:items-end items-start pl-4 lg:pl-0 space-y-4 basis-1/4">
+        <div className="flex flex-col lg:items-end items-start px-4 lg:pl-0 space-y-4 basis-1/4">
           {images.map((image, i) => {
             return (
               <img
