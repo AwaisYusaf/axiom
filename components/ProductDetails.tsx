@@ -8,6 +8,7 @@ const images = [
   "https://cdn.shopify.com/s/files/1/2091/0251/products/m-wenlock3_1800x1800.jpg?v=1584466287",
   "https://cdn.shopify.com/s/files/1/2091/0251/products/m-wenlock1_1800x1800.jpg?v=1584466287",
 ];
+const videos = ["video.mp4"];
 
 function ProductDetails({}: Props) {
   const [selected, setSelected] = useState({
@@ -19,7 +20,26 @@ function ProductDetails({}: Props) {
   return (
     <section className="flex flex-col lg:flex-row lg:space-x-8 lg:px-12 py-20">
       <div className="basis-1/2 flex flex-row-reverse lg:flex-row lg:px-2 space-x-4">
-        <div className="flex flex-col lg:items-end items-start px-4 lg:pl-0 space-y-4 basis-1/4">
+        <div className="flex flex-col lg:items-end  items-start px-4 lg:pl-0 space-y-4 basis-1/4">
+          {videos.map((video, i) => {
+            return (
+              <div key={i} className="relative cursor-pointer">
+                <img
+                  src={images[2]}
+                  alt=""
+                  onClick={() => setSelected({ type: "video", src: video })}
+                  className={`w-[100px] ${
+                    selected.src == video ? "ring-2 ring-black" : ""
+                  }`}
+                />
+                <img
+                  className="absolute top-1 right-1 w-[25px] h-[25px] "
+                  src="https://img.icons8.com/ios-filled/256/play-button-circled.png"
+                />
+              </div>
+            );
+          })}
+
           {images.map((image, i) => {
             return (
               <img
@@ -27,7 +47,7 @@ function ProductDetails({}: Props) {
                 src={image}
                 alt=""
                 onClick={() => setSelected({ type: "image", src: image })}
-                className={`w-[100px] ${
+                className={`w-[100px] cursor-pointer ${
                   selected.src == image ? "ring-2 ring-black" : ""
                 }`}
               />
@@ -35,8 +55,14 @@ function ProductDetails({}: Props) {
           })}
         </div>
         <div className="basis-3/4">
-          <img className="" src={selected.src} />
-          {/* <video src="https://cdn.shopify.com/videos/c/vp/56c0401fb28f4b37ab3c5539342590e4/56c0401fb28f4b37ab3c5539342590e4.HD-720p-4.5Mbps.mp4" /> */}
+          {selected.type == "image" && (
+            <img className="w-full" src={selected.src} />
+          )}
+          {selected.type == "video" && (
+            <video loop autoPlay muted className="w-full">
+              <source src="video.mp4" type="video/mp4" />
+            </video>
+          )}
         </div>
       </div>
       <div className="basis-1/2 flex flex-col space-y-4 mt-6 lg:mt-0 px-4 lg:px-0">
@@ -102,6 +128,21 @@ function ProductDetails({}: Props) {
           Features an understated plus-sign pattern.
         </p>
         <ul className="list-disc ml-8">
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
           <li>All-over print </li>
           <li>Full button down placket and collar </li>
           <li>Front left patch pocket </li>
