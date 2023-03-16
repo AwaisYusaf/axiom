@@ -12,8 +12,8 @@ const videos = ["video.mp4"];
 
 function ProductDetails({}: Props) {
   const [selected, setSelected] = useState({
-    type: "image",
-    src: "https://cdn.shopify.com/s/files/1/2091/0251/products/m-wenlock2_1800x1800.jpg?v=1584466287",
+    type: "video",
+    src: "video.mp4",
   });
   const [size, setSize] = useState("S");
 
