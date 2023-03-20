@@ -1,9 +1,11 @@
-import ProductDetails from "@/components/ProductDetails";
+"use client";
+import Carousel from "@/components/Carousel";
+import { useState } from "react";
 
 export default function Home() {
   return (
-    <>
-      <ProductDetails />
-    </>
+    <section>
+      <Carousel />
+    </section>
   );
 }

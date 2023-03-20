@@ -18,9 +18,9 @@ function ProductDetails({}: Props) {
   const [size, setSize] = useState("S");
 
   return (
-    <section className="flex flex-col lg:flex-row lg:space-x-8 lg:px-12 py-20">
-      <div className="basis-1/2 flex flex-row-reverse lg:flex-row lg:px-2 space-x-4">
-        <div className="flex flex-col lg:items-end  items-start px-4 lg:pl-0 space-y-4 basis-1/4">
+    <section className="flex flex-col lg:flex-row lg:space-x-8 lg:px-12 ">
+      <div className="basis-1/2 flex flex-row-reverse lg:flex-row lg:px-2 space-x-4 h-fit">
+        <div className="flex flex-col lg:items-end  items-start px-4 lg:pl-0 space-y-4 basis-1/4 ">
           {videos.map((video, i) => {
             return (
               <div key={i} className="relative cursor-pointer">
@@ -54,6 +54,7 @@ function ProductDetails({}: Props) {
             );
           })}
         </div>
+
         <div className="basis-3/4">
           {selected.type == "image" && (
             <img className="w-full" src={selected.src} />
@@ -65,6 +66,7 @@ function ProductDetails({}: Props) {
           )}
         </div>
       </div>
+
       <div className="basis-1/2 flex flex-col space-y-4 mt-6 lg:mt-0 px-4 lg:px-0">
         <h3 className="text-3xl font-bold">Chambray Button Down</h3>
         <p className="text-xl tracking-[2px]">$68</p>
@@ -128,6 +130,66 @@ function ProductDetails({}: Props) {
           Features an understated plus-sign pattern.
         </p>
         <ul className="list-disc ml-8">
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
+          <li>All-over print </li>
+          <li>Full button down placket and collar </li>
+          <li>Front left patch pocket </li>
+          <li>Natural corozo buttons throughout</li>
+          <li>Curved hemline</li>
           <li>All-over print </li>
           <li>Full button down placket and collar </li>
           <li>Front left patch pocket </li>
